@@ -1,0 +1,44 @@
+// Inspiration for colors: https://github.com/gbale/vscode-theme-darkplusplus/tree/master/vscode
+
+// $gray-800: #343a40;
+// $dark: $gray-800;
+$body-bg: #1E1E1E;
+$white: #fff;
+$body-color: $white;
+
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.navbar {
+  background-color: rgba(255,255,255,0.05)!important;
+  padding: 0;
+  // border-bottom: 1px solid grey;
+
+  .navbar-brand {
+    background-color: rgba(255,255,255,0.05)!important;
+    margin: 0;
+    padding: 5px 15px;
+  }
+  .nav-item {
+    background-color: rgba(255,255,255,0.05)!important;
+    border-left: 1px solid $body-bg;
+  }
+
+  .navbar-brand.active, .nav-item.active {
+    background-color: $body-bg!important;
+  }
+}

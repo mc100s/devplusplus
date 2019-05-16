@@ -29,7 +29,10 @@ export default class extends React.Component {
     return (
       <div>
         <Navbar color="dark" dark expand="sm" className="mb-3">
-          <NavbarBrand tag={NLink} exact to="/">Dev++</NavbarBrand>
+          <NavbarBrand tag={NLink} exact to="/">
+            <img src="/img/logo-white.png" alt="" className="navbar-logo"/>
+          {/* Dev++ */}
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="" navbar>

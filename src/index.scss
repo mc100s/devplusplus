@@ -2,16 +2,20 @@
 
 // $gray-800: #343a40;
 // $dark: $gray-800;
-$body-bg: #1E1E1E;
+$body-bg: #282b35; // Dark grey: #1E1E1E; Dark blue: #282b35
 $white: #fff;
 $body-color: $white;
 
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
 
 body {
-  font-family: "Menlo", "Monaco", "Courier New", monospace;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto Mono', monospace;
+
+  // font-family: "Menlo", Arial, "Monaco", "Courier New", monospace;
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
 }
 
 .navbar {
@@ -23,7 +27,14 @@ body {
   .navbar-brand {
     background-color: rgba(255,255,255,0.05)!important;
     margin: 0;
-    padding: 5px 20px;
+    padding: 0px 20px;
+    line-height: 40px;
+
+    .navbar-logo {
+      height: 27px;
+      position: relative;
+      top: -2px;
+    }
   }
   .nav-link {
     background-color: rgba(255,255,255,0.05)!important;

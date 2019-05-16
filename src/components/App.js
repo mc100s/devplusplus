@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import './App.scss';
 import MainNavbar from './MainNavbar';
-import {Container} from 'reactstrap'
+import { Container } from 'reactstrap'
+import { Switch, Route } from 'react-router-dom'
+import Home from './pages/Home';
+import Error404 from './pages/Error404';
+import Program from './pages/Program';
 
 class App extends Component {
   render() {
@@ -9,7 +12,11 @@ class App extends Component {
       <div className="App">
         <MainNavbar />
         <Container>
-          <h1>Hello</h1>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/program" exact component={Program} />
+            <Route component={Error404} />
+          </Switch>
         </Container>
       </div>
     );

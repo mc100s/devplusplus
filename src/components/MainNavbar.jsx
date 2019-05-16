@@ -8,6 +8,8 @@ import {
   NavItem,
   NavLink,
 } from 'reactstrap';
+import { NavLink as NLink } from 'react-router-dom'
+
 
 export default class extends React.Component {
   constructor(props) {
@@ -26,16 +28,19 @@ export default class extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="dark" dark expand="md">
-          <NavbarBrand href="/" className="active">Dev++</NavbarBrand>
+        <Navbar color="dark" dark expand="sm" className="mb-3">
+          <NavbarBrand tag={NLink} exact to="/">Dev++</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="" navbar>
               <NavItem>
-                <NavLink href="/components/">The Program</NavLink>
+                <NavLink tag={NLink} to="/program">Our Program</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                <NavLink tag={NLink} to="/team">The Team</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink tag={NLink} to="/about">About</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

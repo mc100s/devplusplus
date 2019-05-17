@@ -40,7 +40,7 @@ export default class extends React.Component {
                 <NavLink tag={NLink} to="/program">Our Program</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={NLink} to="/team">The Team</NavLink>
+                <NavLink tag={NLink} to="/coaches">The Coach</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink tag={NLink} to="/about">About</NavLink>

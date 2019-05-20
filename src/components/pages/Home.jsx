@@ -4,7 +4,7 @@ import { Button } from 'reactstrap'
 const salaries = [
   { city: 'Paris', minValue: 45000, currency: '€' },
   { city: 'London', minValue: 50000, currency: '£' },
-  { city: 'Berlin', minValue: 50000, currency: '€' },
+  { city: 'Berlin', minValue: 48000, currency: '€' },
   { city: 'any city', minValue: 40000, currency: '€' }
 ]
 
@@ -70,28 +70,17 @@ export default function Home(props) {
 
       <h2 className="text-center">Price</h2>
 
-      <div className="box-price">
+      <div className="box box-price">
         <h3 className="box-price__title">42€</h3>
         <ul className="box-price__list">
-          <li className="box-price__list-item">Custom program with custom exercises</li>
+          <li className="box-price__list-item">Custom program and exercises</li>
           <li className="box-price__list-item">Up to 5 hours of coaching and exercise reviews</li>
           <li className="box-price__list-item">Pay only if you passed the selection process</li>
           <li className="box-price__list-item">Satisfied or reimbursed, without any question</li>
         </ul>
         {/* <p className="lead"><em>42€</em></p> */}
-        <p><Button outline color="light">I apply!</Button></p>
-
-
+        <p><Button outline color="light">I apply 🚀</Button></p>
       </div>
-
-
-      <h2 className="text-center">Price</h2>
-
-      <p className="text-center lead">Only <em>42€</em></p>
-      <p className="text-center">If you are not satisfied, we reimburse you without asking any question.</p>
-
-
-
 
       {/* TODO: ask people to teachers */}
     </div>

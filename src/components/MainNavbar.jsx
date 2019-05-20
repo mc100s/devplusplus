@@ -12,7 +12,7 @@ import { NavLink as NLink } from 'react-router-dom'
 import ThemeToggle from "./ThemeToggle"
 
 
-export default class extends React.Component {
+export default class MainNavbar extends React.Component {
   constructor(props) {
     super(props);
 
@@ -28,8 +28,8 @@ export default class extends React.Component {
   }
   render() {
     return (
-      <div>
-        <Navbar color="dark" dark expand="sm" className="mb-3">
+      <div className="MainNavbar">
+        <Navbar color="dark" dark expand="sm" className="mb-3" fixed="top">
           <NavbarBrand tag={NLink} exact to="/">
             <img src="/img/logo-white.png" alt="" className="navbar-logo" />
             {/* Dev++ */}
@@ -42,9 +42,6 @@ export default class extends React.Component {
               </NavItem>
               <NavItem>
                 <NavLink tag={NLink} to="/coaches">The Coach</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={NLink} to="/about">About</NavLink>
               </NavItem>
               <NavItem className="ml-auto">
                 <div className="toggle-container">

@@ -4,7 +4,11 @@
 // $dark: $gray-800;
 $body-bg: #282b35; // Dark grey: #1E1E1E; Dark blue: #282b35
 $white: #fff;
-$body-color: $white;
+$body-color: rgba(255,255,255,0.9);
+$primary: #51a3ff;
+$secondary: #e93c76;
+$transitionDuration: 0.5s;
+$navbarHeight: 50px;
 
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
@@ -16,12 +20,20 @@ html {
 
 body {
   font-family: 'Roboto Mono', monospace;
-
+  background-color: $body-bg;
+  color: $body-color;
+  transition-duration: $transitionDuration;
+  transition-property: background-color, color;
+  padding: $navbarHeight 0;
   // font-family: "Menlo", Arial, "Monaco", "Courier New", monospace;
   // -webkit-font-smoothing: antialiased;
   // -moz-osx-font-smoothing: grayscale;
 }
 
+
+h1 {
+  text-align: center;
+}
 
 h1, h2 {
   color: #51a3ff;
@@ -43,23 +55,22 @@ em {
 
 
 .navbar {
-  background-color: rgba(255,255,255,0.05)!important;
+  background-color: lighten(#282b35, 5%) !important;
   padding: 0;
-  // font-weight: 600;
-  // border-bottom: 1px solid grey;
   
   .toggle-container {
-    margin: 0px 10px;
+    margin: 0px 20px;
     display: flex;
     align-items: center;
     height: 100%;
+    height: $navbarHeight;
   }
 
   .navbar-brand {
-    background-color: rgba(255,255,255,0.05)!important;
+    background-color: lighten(#282b35, 8%) !important;
     margin: 0;
     padding: 0px 20px;
-    height: 50px;
+    height: $navbarHeight;
     display: flex;
     align-items: center;
 
@@ -74,11 +85,11 @@ em {
     width: 100%;
   }
   .nav-link {
-    background-color: rgba(255,255,255,0.05)!important;
+    background-color: lighten(#282b35, 8%) !important;
     border-left: 1px solid $body-bg;
     padding: 5px 15px!important;
     box-sizing: border-box;
-    height: 50px;
+    height: $navbarHeight;
     display: flex;
     align-items: center;
     text-align: center;
@@ -90,13 +101,18 @@ em {
   }
 }
 
-.box-price {
+.box {
   border: 3px solid white;
   border-radius: 3px;
-  text-align: center;
   padding: 20px;
+  transition: $transitionDuration;
+  transition-property: border;
+}
+
+.box-price {
+  text-align: center;
   max-width: 650px;
-  margin: auto;
+  margin: 10px auto;
 
   .box-price__list {
     list-style: none;
@@ -117,6 +133,12 @@ em {
 }
 
 .ThemeToggle {
+  .react-toggle-track {
+    background-color: darken(#282b35, 10%) !important;
+  }
+  .react-toggle-thumb {
+    border-width: 0;
+  }
   .react-toggle-track-check, .react-toggle-track-x {
     margin: 0;
     height: 100%;
@@ -124,7 +146,7 @@ em {
     align-items: center;
   }
   .ThemeToggle__icon {
-    height: 16px;
+    height: 14px;
   }
 
 }
@@ -133,10 +155,60 @@ em {
 //   background-color: #ab199f;
 // }
 
+
+
+
+
+.program-list {
+  .program-list__item {
+    margin-bottom: 15px;
+  }
+}
+
+.coach-card {
+  text-align: center;
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 30px;
+
+  .coach-card__title {
+    margin: 0;
+  }
+  .coach-card__img {
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    object-fit: cover;
+    border-radius: 200px;
+  }
+  .coach-card__link {
+    color: inherit;
+    font-size: 2em;
+    margin: 10px;
+  }
+}
+
+.ThugPicure {
+  cursor: pointer;
+}
+
+
+
+//  For the ".light-theme"
 body.light-theme {
   background-color: white;
-  color: #282b35;
-  transition: 0.5s;
-  // color: black;
-  // color: red;
+  color: $body-bg;
+}
+.light-theme {
+  .box {
+    border: 3px solid $body-bg;  
+  }
+  .btn-outline-light {
+    border-color: $body-bg;
+    color: $body-bg;
+  }
+  .btn-outline-light:hover {
+    background-color: $body-bg;
+    color: $body-color;
+  }
 }

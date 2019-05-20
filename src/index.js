@@ -4,6 +4,7 @@ import './index.scss';
 import App from './components/App.jsx';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from "react-router-dom";
+import "react-toggle/style.css"
 
 
 ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));

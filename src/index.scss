@@ -10,6 +10,10 @@ $body-color: $white;
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
 
+html {
+  font-size: 18px;
+}
+
 body {
   font-family: 'Roboto Mono', monospace;
 
@@ -18,17 +22,47 @@ body {
   // -moz-osx-font-smoothing: grayscale;
 }
 
+
+h1, h2 {
+  color: #51a3ff;
+  margin: 90px 0 30px 0;
+}
+
+h3 {
+  color: #e93c76; 
+  margin: 80px 0 25px 0;
+}
+h2 + h3 {
+  margin-top: 0;
+}
+
+em {
+  color: #e93c76;
+  font-style: normal;
+}
+
+
 .navbar {
   background-color: rgba(255,255,255,0.05)!important;
   padding: 0;
   // font-weight: 600;
   // border-bottom: 1px solid grey;
+  
+  .toggle-container {
+    margin: 0px 10px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
 
   .navbar-brand {
     background-color: rgba(255,255,255,0.05)!important;
     margin: 0;
     padding: 0px 20px;
-    line-height: 40px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+
 
     .navbar-logo {
       height: 27px;
@@ -36,13 +70,73 @@ body {
       top: -2px;
     }
   }
+  .navbar-nav {
+    width: 100%;
+  }
   .nav-link {
     background-color: rgba(255,255,255,0.05)!important;
     border-left: 1px solid $body-bg;
-    padding: 8px 15px!important;
+    padding: 5px 15px!important;
+    box-sizing: border-box;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    line-height: 1em;
   }
 
   .navbar-brand.active, .nav-link.active {
     background-color: $body-bg!important;
   }
+}
+
+.box-price {
+  border: 3px solid white;
+  border-radius: 3px;
+  text-align: center;
+  padding: 20px;
+  max-width: 650px;
+  margin: auto;
+
+  .box-price__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .box-price__list-item {
+    margin: 30px 0;
+  }
+
+  h3 {
+    margin: 0 0 20px 0;
+  }
+
+  p:last-child {
+    // margin: 0;
+  }
+}
+
+.ThemeToggle {
+  .react-toggle-track-check, .react-toggle-track-x {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .ThemeToggle__icon {
+    height: 16px;
+  }
+
+}
+
+// .ThemeToggle.react-toggle--checked .react-toggle-track {
+//   background-color: #ab199f;
+// }
+
+body.light-theme {
+  background-color: white;
+  color: #282b35;
+  transition: 0.5s;
+  // color: black;
+  // color: red;
 }

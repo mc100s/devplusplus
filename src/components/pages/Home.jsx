@@ -79,7 +79,7 @@ export default function Home(props) {
           <li className="box-price__list-item">Satisfied or reimbursed, without any question</li>
         </ul>
         {/* <p className="lead"><em>42€</em></p> */}
-        <p><Button outline color="light">I apply 🚀</Button></p>
+        <p><Button tag="a" target="_blank" href="https://maxencebouret.typeform.com/to/iq52bz" outline color="light">I apply 🚀</Button></p>
       </div>
 
       {/* TODO: ask people to teachers */}

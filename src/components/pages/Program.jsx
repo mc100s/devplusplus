@@ -19,7 +19,7 @@ export default class Program extends Component {
           <li className="program-list__item">Database: a relational database (<em>SQL</em>) and a NoSQL database (<em>MongoDB</em>)</li>
           <li className="program-list__item">Creation of Rest API with different authentication system</li>
           <li className="program-list__item">Testing: front-end testing (<em>Cypress</em>) and back-end testing (<em>Mocha</em>+<em>Chai</em>)</li>
-          <li className="program-list__item">Deployement (<em>AWS</em>)</li>
+          <li className="program-list__item">Deployment (<em>AWS</em>)</li>
           <li className="program-list__item">And more based on your need!</li>
         </ul>
       </div>
